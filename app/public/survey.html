@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Survey Page</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="jumbotron">
+            <h1><span class="fa fa-heartbeat"></span> Friend Finder</h1>
+            <hr>
+            <h2>Let's find you a friend!</h2>
+            <br>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-body">
+                        <form role="form">
+                            <div class="form-group">
+                                <label for="friend-name">Your Name</label>
+                                <input type="text" class="form-control" id="friend-name">
+                            </div>
+                            <div class="form-group">
+                                <label for="friend-photo">Link to Photo Image</label>
+                                <input type="text" class="form-control" id="friend-photo">
+                            </div>
+                            <hr>
+                            <div class="form-group">
+
+                            </div>
+                            <button type="submit" class="btn btn-primary submit">Submit Survey</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="container">
+                <p><a href="/api/friends">API Friend List</a> | <a href="https://github.com/salemgrace/friend-finder">GitHub
+                        Repo</a>
+            </div>
+        </footer>
+
+    </div>
+
+</body>
+
+</html>
+
+<script type="text/javascript">
+
+    $(".submit").on("click", function(event) {
+        event.preventDefault();
+        
+        var newFriend = {
+            friendName: $("#friend-name").val().trim(),
+            friendNumber: $("#friend-number").val().trim(),
+            answerOne: $("#answer-one").val().trim(),
+            answerTwo: $("#answer-two").val().trim(),
+            answerThree: $("#answer-three").val().trim(),
+            answerFour: $("#answer-four").val().trim(),
+            answerFive: $("#answer-five").val().trim(),
+            answerSix: $("#answer-six").val().trim(),
+            answerSeven: $("#answer-seven").val().trim(),
+            answerEight: $("#answer-eight").val().trim(),
+            answerNine: $("#answer-nine").val().trim(),
+            answerTen: $("#answer-ten").val().trim()
+        };
+        console.log(newFriend);
+
+        $.post("/api/friends", newFriend,
+            function(data) {
+                if (data) {
+                    alert("Yay! Here is your best friend match.")
+                } else {
+                    alert("Sorry, no friends for you.")
+                }
+
+                $("#friend-name").val("");
+                $("#friend-number").val("");
+                $("#answer-one").val("");
+                $("#answer-two").val("");
+                $("#answer-three").val("");
+                $("#answer-four").val("");
+                $("#answer-five").val("");
+                $("#answer-six").val("");
+                $("#answer-seven").val("");
+                $("#answer-eight").val("");
+                $("#answer-nine").val("");
+                $("#answer-ten").val("");
+            });
+    });
+
+</script>

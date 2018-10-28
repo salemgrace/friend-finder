@@ -38,9 +38,116 @@
                             </div>
                             <hr>
                             <div class="form-group">
-
+                                <label for="answer-one">Q1: On a Friday, you are more likely to watch Netflix with Wine than have a crazy night out.</label>
+                                <select class="form-control" id="answer-one">
+                                    <option selected>Choose...</option>
+                                    <option class="text-center">1 (Strongly Disagree)</option>
+                                    <option class="text-center">2</option>
+                                    <option class="text-center">3</option>
+                                    <option class="text-center">4</option>
+                                    <option class="text-center">5 (Strongly Agree)</option>
+                                </select>
                             </div>
-                            <button type="submit" class="btn btn-primary submit">Submit Survey</button>
+                            <div class="form-group">
+                                <label for="answer-two">Q2: </label>
+                                <select class="form-control" id="answer-two">
+                                    <option selected>Choose...</option>
+                                    <option class="text-center">1 (Strongly Disagree)</option>
+                                    <option class="text-center">2</option>
+                                    <option class="text-center">3</option>
+                                    <option class="text-center">4</option>
+                                    <option class="text-center">5 (Strongly Agree)</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="answer-three">Q3: </label>
+                                <select class="form-control" id="answer-three">
+                                    <option selected>Choose...</option>
+                                    <option class="text-center">1 (Strongly Disagree)</option>
+                                    <option class="text-center">2</option>
+                                    <option class="text-center">3</option>
+                                    <option class="text-center">4</option>
+                                    <option class="text-center">5 (Strongly Agree)</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="answer-four">Q4: </label>
+                                <select class="form-control" id="answer-four">
+                                    <option selected>Choose...</option>
+                                    <option class="text-center">1 (Strongly Disagree)</option>
+                                    <option class="text-center">2</option>
+                                    <option class="text-center">3</option>
+                                    <option class="text-center">4</option>
+                                    <option class="text-center">5 (Strongly Agree)</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="answer-five">Q5: </label>
+                                <select class="form-control" id="answer-five">
+                                    <option selected>Choose...</option>
+                                    <option class="text-center">1 (Strongly Disagree)</option>
+                                    <option class="text-center">2</option>
+                                    <option class="text-center">3</option>
+                                    <option class="text-center">4</option>
+                                    <option class="text-center">5 (Strongly Agree)</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="answer-six">Q6: </label>
+                                <select class="form-control" id="answer-six">
+                                    <option selected>Choose...</option>
+                                    <option class="text-center">1 (Strongly Disagree)</option>
+                                    <option class="text-center">2</option>
+                                    <option class="text-center">3</option>
+                                    <option class="text-center">4</option>
+                                    <option class="text-center">5 (Strongly Agree)</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="answer-seven">Q7: </label>
+                                <select class="form-control" id="answer-seven">
+                                    <option selected>Choose...</option>
+                                    <option class="text-center">1 (Strongly Disagree)</option>
+                                    <option class="text-center">2</option>
+                                    <option class="text-center">3</option>
+                                    <option class="text-center">4</option>
+                                    <option class="text-center">5 (Strongly Agree)</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="answer-eight">Q8: </label>
+                                <select class="form-control" id="answer-eight">
+                                    <option selected>Choose...</option>
+                                    <option class="text-center">1 (Strongly Disagree)</option>
+                                    <option class="text-center">2</option>
+                                    <option class="text-center">3</option>
+                                    <option class="text-center">4</option>
+                                    <option class="text-center">5 (Strongly Agree)</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="answer-nine">Q9: </label>
+                                <select class="form-control" id="answer-nine">
+                                    <option selected>Choose...</option>
+                                    <option class="text-center">1 (Strongly Disagree)</option>
+                                    <option class="text-center">2</option>
+                                    <option class="text-center">3</option>
+                                    <option class="text-center">4</option>
+                                    <option class="text-center">5 (Strongly Agree)</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="answer-ten">Q10: </label>
+                                <select class="form-control" id="answer-ten">
+                                    <option selected>Choose...</option>
+                                    <option class="text-center">1 (Strongly Disagree)</option>
+                                    <option class="text-center">2</option>
+                                    <option class="text-center">3</option>
+                                    <option class="text-center">4</option>
+                                    <option class="text-center">5 (Strongly Agree)</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-primary submit" class="submit">Submit Survey</button>
                         </form>
                     </div>
                 </div>
@@ -61,28 +168,28 @@
 </html>
 
 <script type="text/javascript">
-
-    $(".submit").on("click", function(event) {
+    $(".submit").on("click", function (event) {
         event.preventDefault();
-        
+
         var newFriend = {
             friendName: $("#friend-name").val().trim(),
-            friendNumber: $("#friend-number").val().trim(),
-            answerOne: $("#answer-one").val().trim(),
-            answerTwo: $("#answer-two").val().trim(),
-            answerThree: $("#answer-three").val().trim(),
-            answerFour: $("#answer-four").val().trim(),
-            answerFive: $("#answer-five").val().trim(),
-            answerSix: $("#answer-six").val().trim(),
-            answerSeven: $("#answer-seven").val().trim(),
-            answerEight: $("#answer-eight").val().trim(),
-            answerNine: $("#answer-nine").val().trim(),
-            answerTen: $("#answer-ten").val().trim()
+            friendPhoto: $("#friend-photo").val().trim(),
+            scores: [
+            $("#answer-one").val().trim(),
+            $("#answer-two").val().trim(),
+            $("#answer-three").val().trim(),
+            $("#answer-four").val().trim(),
+            $("#answer-five").val().trim(),
+            $("#answer-six").val().trim(),
+            $("#answer-seven").val().trim(),
+            $("#answer-eight").val().trim(),
+            $("#answer-nine").val().trim(),
+            $("#answer-ten").val().trim()]
         };
         console.log(newFriend);
 
         $.post("/api/friends", newFriend,
-            function(data) {
+            function (data) {
                 if (data) {
                     alert("Yay! Here is your best friend match.")
                 } else {
@@ -90,7 +197,7 @@
                 }
 
                 $("#friend-name").val("");
-                $("#friend-number").val("");
+                $("#friend-photo").val("");
                 $("#answer-one").val("");
                 $("#answer-two").val("");
                 $("#answer-three").val("");
@@ -103,5 +210,4 @@
                 $("#answer-ten").val("");
             });
     });
-
 </script>

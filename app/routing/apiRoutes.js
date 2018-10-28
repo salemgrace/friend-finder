@@ -1,15 +1,15 @@
-var friendData = require("../data/friend");
+var friendArray = require("../data/friend");
 
 // ROUTING
 module.exports = function (app) {
 
     app.get("/api/friends", function (req, res) {
-        res.json(friendData);
+        res.json(friendArray);
     });
 
 
     app.post("/api/friends", function (req, res) {
-        friendData.push(req.body);
+        friendArray.push(req.body);
         res.json(true);
     });
 
@@ -19,7 +19,7 @@ module.exports = function (app) {
 
     app.post("/api/clear", function (req, res) {
         // Empty out the arrays of data
-        friendData.length = [];
+        friendArray.length = [];
 
         res.json({
             ok: true

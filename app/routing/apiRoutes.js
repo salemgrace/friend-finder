@@ -7,8 +7,22 @@ module.exports = function (app) {
         res.json(friendArray);
     });
 
-
     app.post("/api/friends", function (req, res) {
+        var newFriend = (req.body)
+        var currentScoresArray = newFriend.scores;
+        currentScoresArray = currentScoresArray.map(function (x) {
+            return parseInt(x, 10);
+        });
+        console.log("Current Scores: " + currentScoresArray);
+
+        for (var i = 0; i < friendArray.length; i++) {
+            scoresArray = friendArray[i].scores;
+            console.log("Scores Array to Check for Match: " + scoresArray);
+            for (var j = 0; j < scoresArray.length; j++) {
+                
+            }
+        }
+
         friendArray.push(req.body);
         res.json(true);
     });

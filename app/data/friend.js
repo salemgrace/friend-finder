@@ -1,6 +1,6 @@
 var friendArray = [{
-    friendName: "Ahmed",
-    friendPhoto: "ahmed@example.com",
+    friendName: "Friend Test One",
+    friendPhoto: "friendOne@example.com",
     scores: [
         3,
         1,
@@ -11,6 +11,22 @@ var friendArray = [{
         2,
         3,
         1,
+        4
+    ]
+},
+{
+    friendName: "Friend Test Two",
+    friendPhoto: "friendTwo@example.com",
+    scores: [
+        4,
+        5,
+        1,
+        2,
+        4,
+        5,
+        1,
+        2,
+        3,
         4
     ]
 }];
